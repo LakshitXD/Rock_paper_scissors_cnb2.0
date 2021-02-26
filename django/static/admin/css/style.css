@@ -3,7 +3,7 @@
 }
 body {
     background:#f3c955;
-    font-family:'Roboto',sans-serif;
+    font-family:'Concert One',cursive;
   }
   div.content{
       display:block;
@@ -29,6 +29,16 @@ img.plwithtrump{
     height:auto;
     display:inline-block;
 }
+div.subcontent1{
+  text-align: center;
+}
+div.subcontent{
+  display:flex;
+  justify-content: space-between;
+}
+div.subcontent p{
+  display:inline;
+}
 
   button {
     background:#0cb3b9;
@@ -50,6 +60,16 @@ img.plwithtrump{
     
    
   }
+  #plagain{
+    background: #0cb3b9;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    margin:0px auto 0px auto;
+
+  }
   #yeye{
     height:50%;
     width:auto;
@@ -70,6 +90,10 @@ img.plwithtrump{
     font-size:5rem;
     color:white;
     
+  }
+  p.subtitles{
+    font-size: 1.5rem;
+    color:rgb(0, 0, 0);
   }
   button:hover {
     animation-name: shakeAnim;

@@ -14,7 +14,7 @@
     </head>
     <body>
         <nav class="navbar">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
               <img class = "logobar" src="../static/admin/img/logo.png" alt="">
             </a>
             <a class = "navbar-brand" href = "https://github.com/LakshitXD/Rock_paper_scissors_cnb2.0"><img class = "logobar1" src ="../static/admin/img/pngfind.com-github-logo-png-1766942 (1).png"></a>
@@ -25,11 +25,20 @@
               <br>
               <br>
                 <img id = "yeye" src = ""><br><br>
-            <div class ="subcontent">
-            <a class = {{result}}></a>
-            <!-- <button class = "Gobtn" onclick = "" id = "okbtn">GO</button></div> -->
+            <div class ="allo">{{result}}</div>
+          <div class = "subcontent">
+            <p>Your choice:
+              <img class = "players" width="30%" height="auto"></p>
+              &nbsp;&nbsp;
+               <p> Trump Chose:
+              <img class = "trumps" width="30%" height="auto"></p>
+              <br>
+              
+              
+              <!-- <button class = "Gobtn" onclick = "" id = "okbtn">GO</button></div> -->
           </div>
-          <div class = "allo">{{result}}</div>
+          <br>
+          <a id = "plagain" href="/">Play again</a>
           <div class ="footer"></div>
          
           <script type ="text/javascript">
@@ -62,8 +71,8 @@
           w5: I can say you are very lucky!!
           */
 
-          var lose = [["l1.mp3",3000,"Don't worry Kiddo! not everyone can beat me."],["l2.mp3",4000,"Ha Ha! I knew that you can't beat me, you NOOB."],["l3.mp3",4000,"In this game I will always be the paper and you will always be a dumb ROCK!"],["l4.mp3",2000,"You failed again! and that's what she said!"],["l5.mp3",2000,"I don't play with losers again and again."]];
-          var win = [["w1.mp3",5000,"Among all players i always knew you had something in you but next time i'll definitely beat you!"],["w2.mp3",3000,"I knew you always had been the chosen ONE!"],["w3.mp3",4000,"Stranger! you have hands of winner but not face"],["w4.mp3",4000,"Guys we have a winner can we have a round of applause for this CHAMP!"],["w5.mp3",2000,"I can say you are very lucky!!"]];
+          var lose = [["l1.mp3",3000," Trump Says:- Don't worry Kiddo! not everyone can beat me."],["l2.mp3",4000,"Trump Says:- Ha Ha! I knew that you can't beat me, you NOOB."],["l3.mp3",4000,"Trump Says:- In this game I will always be the paper and you will always be a dumb ROCK!"],["l4.mp3",2000,"Trump Says:- You failed again! and that's what she said!"],["l5.mp3",2000,"Trump Says:- I don't play with losers again and again."]];
+          var win = [["w1.mp3",5000,"Trump Says:- Among all players i always knew you had something in you but next time i'll definitely beat you!"],["w2.mp3",3000,"Trump Says:- I knew you always had been the chosen ONE!"],["w3.mp3",3500,"Trump Says:- Stranger! you have hands of winner but not face"],["w4.mp3",4000,"Trump Says:- Guys we have a winner can we have a round of applause for this CHAMP!"],["w5.mp3",2000,"Trump Says:- I can say you are very lucky!!"]];
           
           console.log(trump);
           console.log(res);
@@ -120,6 +129,8 @@
 
           }
           document.getElementsByClassName("allo")[0].style.display="block";
+          document.getElementsByClassName("trumps")[0].setAttribute('src','../static/admin/img/'+trump+".png");
+          document.getElementsByClassName("players")[0].setAttribute('src','../static/admin/img/'+res+".png");
         
        console.log(tagvar);
       //  var totalFrames = 78;
