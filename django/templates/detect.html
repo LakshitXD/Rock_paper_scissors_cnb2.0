@@ -47,8 +47,23 @@
 
           var arr = ["Rock","Paper","Scissors"];
           var trump=arr[Math.floor(Math.random()*3)];
-          var lose = [["l1.mp3",3000],["l2.mp3",4000],["l3.mp3",4000],["l4.mp3",2000],["l5.mp3",2000]];
-          var win = [["w1.mp3",5000],["w2.mp3",3000],["w3.mp3",4000],["w4.mp3",4000],["w5.mp3",2000]];
+          /*
+          Subtitles:-
+
+          l1: Don't worry Kiddo! not everyone can beat me.
+          l2: Ha Ha! I knew that you cant beat me, you NOOB.
+          l3: In this game I will always be the paper and you will always be a dumb ROCK!
+          l4: You failed again! and that's what she said!
+          l5: I don't play with losers again and again.
+          w1: Amon all players i always knew you had something in you but next time i'll definitely beat you!
+          w2: I knew you always had been the chosen ONE!
+          w3: Stranger! you have hands of winner but not face
+          w4: Guys we have a winner can we have a round of applause for this CHAMP!
+          w5: I can say you are very lucky!!
+          */
+
+          var lose = [["l1.mp3",3000,"Don't worry Kiddo! not everyone can beat me."],["l2.mp3",4000,"Ha Ha! I knew that you can't beat me, you NOOB."],["l3.mp3",4000,"In this game I will always be the paper and you will always be a dumb ROCK!"],["l4.mp3",2000,"You failed again! and that's what she said!"],["l5.mp3",2000,"I don't play with losers again and again."]];
+          var win = [["w1.mp3",5000,"Among all players i always knew you had something in you but next time i'll definitely beat you!"],["w2.mp3",3000,"I knew you always had been the chosen ONE!"],["w3.mp3",4000,"Stranger! you have hands of winner but not face"],["w4.mp3",4000,"Guys we have a winner can we have a round of applause for this CHAMP!"],["w5.mp3",2000,"I can say you are very lucky!!"]];
           
           console.log(trump);
           console.log(res);
@@ -62,21 +77,20 @@
             step(1);
           }
           else if(trump==="Rock" && res ==="Paper"){
-            document.getElementsByClassName("allo")[0].innerHTML="<p class = 'result'>Player Wins</p>";
+            document.getElementsByClassName("allo")[0].innerHTML=`<p class = 'result'>Player Wins</p> <p class='subtitles'>${win[idx][2]}</p>`;
             let audio1 = new Audio("../static/admin/audio/"+win[idx][0]);
             audio1.play();
             animationDuration=win[idx][1];
-            step(1);
           }
           else if(trump ==="Paper"&& res ==="Rock"){
-            document.getElementsByClassName("allo")[0].innerHTML="<p class = 'result'>Trump Wins</p>";
+            document.getElementsByClassName("allo")[0].innerHTML=`<p class = 'result'>Trump Wins</p><p class='subtitles'>${lose[idx][2]}</p>`;
             let audio1 = new Audio("../static/admin/audio/"+lose[idx][0]);
             audio1.play();
             animationDuration=lose[idx][1];
             step(1);
           }
           else if(trump ==="Paper"&& res ==="Scissors"){
-             document.getElementsByClassName("allo")[0].innerHTML="<p class = 'result'>Player Wins</p>";
+             document.getElementsByClassName("allo")[0].innerHTML=`<p class = 'result'>Player Wins</p><p class='subtitles'>${win[idx][2]}</p>`;
             let audio1 = new Audio("../static/admin/audio/"+win[idx][0]);
             audio1.play();
             animationDuration=win[idx][1];
@@ -84,21 +98,21 @@
             }
 
           else if(trump ==="Scissors"&& res ==="Paper"){
-            document.getElementsByClassName("allo")[0].innerHTML="<p class = 'result'>Trump Wins</p>";
+            document.getElementsByClassName("allo")[0].innerHTML=`<p class = 'result'>Trump Wins</p><p class='subtitles'>${lose[idx][2]}</p>`;
             let audio1 = new Audio("../static/admin/audio/"+lose[idx][0]);
             audio1.play();
             animationDuration=lose[idx][1];
             step(1);
           }
           else if(trump ==="Scissors"&& res ==="Rock"){
-             document.getElementsByClassName("allo")[0].innerHTML="<p class = 'result'>Player Wins</p>";
+             document.getElementsByClassName("allo")[0].innerHTML=`<p class = 'result'>Player Wins</p><p class='subtitles'>${win[idx][2]}</p>`;
             let audio1 = new Audio("../static/admin/audio/"+win[idx][0]);
             audio1.play();
             animationDuration=win[idx][1];
             step(1);
           }
           else if(trump ==="Rock"&& res ==="Scissors"){
-           document.getElementsByClassName("allo")[0].innerHTML="<p class = 'result'>Trump Wins</p>";
+           document.getElementsByClassName("allo")[0].innerHTML=`<p class = 'result'>Trump Wins</p><p class='subtitles'>${lose[idx][2]}</p>`;
             let audio1 = new Audio("../static/admin/audio/"+lose[idx][0]);
             audio1.play();
             animationDuration=lose[idx][1];
