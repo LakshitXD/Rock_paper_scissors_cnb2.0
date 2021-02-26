@@ -1,0 +1,123 @@
+*{
+    box-sizing: content-box;
+}
+body {
+    background:#f3c955;
+    font-family:'Roboto',sans-serif;
+  }
+  div.content{
+      display:block;
+      
+      text-align: center;
+    
+  }
+  .navbar{
+      text-align: left;
+      display:flex;
+      justify-content: space-between;
+  }
+img.logobar{
+    width:75px;
+    height:auto;
+}
+img.logobar1{
+    width:50px;
+    height:auto;
+}
+img.plwithtrump{
+    width:400px;
+    height:auto;
+    display:inline-block;
+}
+a.Rock{
+  background: url("https://imgur.com/nW5VI7e.png");
+  background-repeat: no-repeat;
+  background-size:auto;
+  width:50%;
+  height:300px;
+  margin: 0px auto 0px auto;
+  text-align:center;
+  display:inline-block;
+}
+a.Paper{
+  background: url("https://ktla.com/wp-content/uploads/sites/4/2020/04/GettyImages-1213254321.jpg");
+  background-repeat: no-repeat;
+  background-size:auto;
+  width:50%;
+  height:300px;
+  margin: 0px auto 0px auto;
+  text-align:center;
+  display:inline-block;
+}
+a.Scissors{
+  background: url("https://media.tenor.com/images/7f977baee89a794551241236033fe707/tenor.gif");
+  background-repeat: no-repeat;
+  background-size:auto;
+  width:50%;
+  height:300px;
+  margin: 0px auto 0px auto;
+  text-align:center;
+  display:inline-block;
+}
+  button {
+    background:#0cb3b9;
+    border: 5px solid white;
+    top:100px;
+    font-size: 20px;
+    width:150px;
+    font-size:3rem;
+    color:white;
+    border-radius: 50%;
+    height:150px;
+    padding: 10px 20px;
+    position: relative;
+    animation-name: shake;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    cursor: pointer;
+    
+   
+  }
+  div.subcontent{
+    width:50%;
+    height:auto;
+    margin:0px auto 0px auto;
+  }
+  div.allo{
+    display:none;
+  }
+  p.timer{
+    font-size:5rem;
+    color:white;
+  }
+  p.result{
+    font-size:5rem;
+    color:white;
+    
+  }
+  button:hover {
+    animation-name: shakeAnim;
+  }
+  
+  @keyframes shakeAnim {
+    0% {left: 0}
+    1% {left: -3px}
+    2% {left: 5px}
+    3% {left: -8px}
+    4% {left: 8px}
+    5% {left: -5px}
+    6% {left: 3px}
+    7% {left: 0}
+  }
+  
+  @keyframes shake {
+    0% {left: 0}
+    1% {left: -3px}
+    2% {left: 5px}
+    3% {left: -8px}
+    4% {left: 8px}
+    5% {left: -5px}
+    6% {left: 3px}
+    7% {left: 0}
+  }

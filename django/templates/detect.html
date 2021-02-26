@@ -1,0 +1,87 @@
+
+ <html>
+  
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Sacramento&display=swap" rel="stylesheet">
+        <link href = "../static/admin/css/style.css" rel = "stylesheet">
+        
+    </head>
+    <body>
+        <nav class="navbar">
+            <a class="navbar-brand" href="#">
+              <img class = "logobar" src="../static/admin/img/logo.png" alt="">
+            </a>
+            <a class = "navbar-brand"><img class = "logobar1" src ="../static/admin/img/pngfind.com-github-logo-png-1766942 (1).png"></a>
+          </nav>
+          <div class = "content">
+              <img class = "plwithtrump" src = "../static/admin/img/trump.png">
+              
+              <br>
+              <br>
+              
+            <div class ="subcontent">
+            <a class = {{result}}></a>
+            <!-- <button class = "Gobtn" onclick = "" id = "okbtn">GO</button></div> -->
+          </div>
+          <div class = "allo">{{result}}</div>
+          <div class ="footer"></div>
+         
+          <script type ="text/javascript">
+          var res = document.getElementsByClassName("allo")[0].innerHTML;
+          
+
+          // let player,trump2;
+
+          var arr = ["Rock","Paper","Scissors"];
+          var trump=arr[Math.floor(Math.random()*3)];
+          var lose = ["l1.mp3","l2.mp3","l3.mp3","l4.mp3","l5.mp3"];
+          var win = ["w1.mp3","w2.mp3","w3.mp3","w4.mp3","w5.mp3"];
+          console.log(trump);
+          console.log(res);
+          
+          if(trump===res){
+            document.getElementsByClassName("allo")[0].innerHTML="<p class = 'result'>Draw</p>";
+            let audio1 = new Audio("../static/admin/audio/"+lose[Math.floor(Math.random()*5)]);
+            audio1.play();
+          }
+          else if(trump==="Rock" && res ==="Paper"){
+            document.getElementsByClassName("allo")[0].innerHTML="<p class = 'result'>Player Wins</p>";
+            let audio1 = new Audio("../static/admin/audio/"+win[Math.floor(Math.random()*5)]);
+            audio1.play();
+          }
+          else if(trump ==="Paper"&& res ==="Rock"){
+            document.getElementsByClassName("allo")[0].innerHTML="<p class = 'result'>Trump Wins</p>";
+            let audio1 = new Audio("../static/admin/audio/"+lose[Math.floor(Math.random()*5)]);
+            audio1.play();
+          }
+          else if(trump ==="Paper"&& res ==="Scissors"){
+            document.getElementsByClassName("allo")[0].innerHTML="<p class = 'result'>Player wins</p>";
+            let audio1 = new Audio("../static/admin/audio/"+win[Math.floor(Math.random()*5)]);
+            audio1.play();
+          }
+          else if(trump ==="Scissors"&& res ==="Paper"){
+            document.getElementsByClassName("allo")[0].innerHTML="<p class = 'result'>Trump Wins</p>";
+            let audio1 = new Audio("../static/admin/audio/"+lose[Math.floor(Math.random()*5)]);
+            audio1.play();
+          }
+          else if(trump ==="Scissors"&& res ==="Rock"){
+            document.getElementsByClassName("allo")[0].innerHTML="<p class = 'result'>Player Wins</p>";
+            let audio1 = new Audio("../static/admin/audio/"+win[Math.floor(Math.random()*5)]);
+            audio1.play();
+          }
+          else if(trump ==="Rock"&& res ==="Scissors"){
+            document.getElementsByClassName("allo")[0].innerHTML="<p class = 'result'>Trump Wins</p>";
+            let audio1 = new Audio("../static/admin/audio/"+lose[Math.floor(Math.random()*5)]);
+            audio1.play();
+
+          }
+          document.getElementsByClassName("allo")[0].style.display="block";
+          </script>
+    </body>
+</html>

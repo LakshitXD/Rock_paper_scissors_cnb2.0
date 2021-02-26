@@ -1,0 +1,80 @@
+*{
+    box-sizing: content-box;
+}
+body {
+    background:#f3c955;
+    font-family:'Roboto',sans-serif;
+  }
+  div.content{
+      display:block;
+      
+      text-align: center;
+    
+  }
+  .navbar{
+      text-align: left;
+      display:flex;
+      justify-content: space-between;
+  }
+img.logobar{
+    width:75px;
+    height:auto;
+}
+img.logobar1{
+    width:50px;
+    height:auto;
+}
+img.plwithtrump{
+    width:400px;
+    height:auto;
+    display:inline-block;
+}
+  button {
+    background:#0cb3b9;
+    border: 5px solid white;
+    top:100px;
+    font-size: 20px;
+    width:150px;
+    font-size:3rem;
+    color:white;
+    border-radius: 50%;
+    height:150px;
+    padding: 10px 20px;
+    position: relative;
+    animation-name: shake;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    cursor: pointer;
+    
+   
+  }
+  p.timer{
+    font-size:5rem;
+    color:white;
+  }
+  button:hover {
+    animation-name: shakeAnim;
+  }
+  
+  @keyframes shakeAnim {
+    0% {left: 0}
+    1% {left: -3px}
+    2% {left: 5px}
+    3% {left: -8px}
+    4% {left: 8px}
+    5% {left: -5px}
+    6% {left: 3px}
+    7% {left: 0}
+  }
+  
+  @keyframes shake {
+    0% {left: 0}
+    1% {left: -3px}
+    2% {left: 5px}
+    3% {left: -8px}
+    4% {left: 8px}
+    5% {left: -5px}
+    6% {left: 3px}
+    7% {left: 0}
+  }

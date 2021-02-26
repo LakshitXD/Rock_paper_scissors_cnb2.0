@@ -1,0 +1,65 @@
+{% load static %}
+<html>
+  
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Sacramento&display=swap" rel="stylesheet">
+        <link href = "../static/admin/css/style.css" rel = "stylesheet">
+        
+    </head>
+    <body>
+        <nav class="navbar">
+            <a class="navbar-brand" href="#">
+              <img class = "logobar" src="../static/admin/img/logo.png" alt="">
+            </a>
+            <a class = "navbar-brand"><img class = "logobar1" src ="../static/admin/img/pngfind.com-github-logo-png-1766942 (1).png"></a>
+          </nav>
+          <div class = "content">
+              <img class = "plwithtrump" src = "../static/admin/img/trump.png">
+              <br>
+              <br>
+            <div class ="subcontent">
+            <button class = "Gobtn" onclick = "location.href='/detect'" id = "okbtn">GO</button></div>
+          </div>
+          <div class ="footer"></div>
+          <script type = "text/javascript">
+          button.addEventListener('click', async _ => {
+  try {     
+    const response = await fetch('yourUrl', {
+      method: 'post',
+      body: {
+       name:'hello'
+      }
+    });
+    console.log('Completed!', response);
+  } catch(err) {
+    console.error(`Error: ${err}`);
+  }
+});
+          function endoftimer(){
+            document.getElementsByClassName("subcontent")[0].innerHTML="Sad";
+          }
+            function countDown(){
+              var myBtn=document.getElementById("okbtn");
+              myBtn.style.display="none";
+              let count = 3;
+              setInterval(function(){
+                if(count!=0){
+              
+              
+              document.getElementsByClassName("subcontent")[0].innerHTML="<p class='timer'>"+count+"</p>";
+              count--;
+              }else{clearInterval(count);
+                endoftimer();
+              }
+            },1000);
+              
+          }
+          </script>
+    </body>
+</html>
