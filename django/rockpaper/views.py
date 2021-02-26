@@ -14,7 +14,7 @@ def detect(request):
     cap = cv2.VideoCapture(0)
     class_name = ['Nothing', 'Paper', 'Rock', 'Scissors']
 
-    model=tf.keras.models.load_model(r'C:\Users\Aryan\Downloads\Model_4_classes.h5')
+    model=tf.keras.models.load_model(r'C:\Users\YUG\Downloads\Model_4_classes.h5')
 
     while(cap.isOpened()):
         _, frame = cap.read()

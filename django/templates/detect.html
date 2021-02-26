@@ -122,6 +122,8 @@
     timeWhenLastUpdate = startTime;
 
     if (frameNumber >= totalFrames) {
+      frameNumber = 1;
+      still(1);
       return 1;
     } else {
        frameNumber = frameNumber + 1;
@@ -135,6 +137,26 @@ function pad(num) {
     return "00"+num;
     else
     return "0"+num;
+}
+function still(startTime){
+  timePerFrame = 100;
+  if (!timeWhenLastUpdate) timeWhenLastUpdate = startTime;
+  
+  timeFromLastUpdate = startTime - timeWhenLastUpdate;
+  
+  if (timeFromLastUpdate > timePerFrame) {
+    tagvar.setAttribute("src","../static/admin/img/ezgif-frame-"+pad(frameNumber)+".jpg");
+    timeWhenLastUpdate = startTime;
+
+    if (frameNumber >= 10) {
+      frameNumber = 1;
+    } else {
+       frameNumber = frameNumber + 1;
+    }        
+  }
+  requestAnimationFrame(still);
+
+
 }
           </script>
     </body>
