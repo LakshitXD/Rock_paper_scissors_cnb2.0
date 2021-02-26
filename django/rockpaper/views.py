@@ -32,7 +32,7 @@ def detect(request):
         
         idx = np.argmax(classes)
         
-        cv2.putText(frame, class_name[idx], (10,30), cv2.FONT_HERSHEY_SIMPLEX, 1,(0,0,255), 2, cv2.LINE_AA)
+        cv2.putText(frame, "{} : press Space to continue:".format(class_name[idx]), (10,30), cv2.FONT_HERSHEY_SIMPLEX, 0.6,(0,0,255), 2, cv2.LINE_AA)
         
         cv2.namedWindow ('original', cv2.WINDOW_NORMAL)
         #cv2.namedWindow ('resized', cv2.WINDOW_NORMAL)
@@ -40,7 +40,7 @@ def detect(request):
         cv2.imshow('original', frame)
         #cv2.imshow('resized', resized)
         
-        if cv2.waitKey(25) & 0xFF == ord('q'):
+        if cv2.waitKey(25) & 0xFF == ord(" "):
             break
 
     cap.release()
