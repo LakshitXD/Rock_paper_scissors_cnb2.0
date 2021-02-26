@@ -17,30 +17,19 @@
             <a class="navbar-brand" href="#">
               <img class = "logobar" src="../static/admin/img/logo.png" alt="">
             </a>
-            <a class = "navbar-brand"><img class = "logobar1" src ="../static/admin/img/pngfind.com-github-logo-png-1766942 (1).png"></a>
+            <a class = "navbar-brand" href = "https://github.com/LakshitXD/Rock_paper_scissors_cnb2.0"><img class = "logobar1" src ="../static/admin/img/pngfind.com-github-logo-png-1766942 (1).png"></a>
           </nav>
           <div class = "content">
               <img class = "plwithtrump" src = "../static/admin/img/trump.png">
               <br>
               <br>
+            
             <div class ="subcontent">
             <button class = "Gobtn" onclick = "location.href='/detect'" id = "okbtn">GO</button></div>
           </div>
           <div class ="footer"></div>
           <script type = "text/javascript">
-          button.addEventListener('click', async _ => {
-  try {     
-    const response = await fetch('yourUrl', {
-      method: 'post',
-      body: {
-       name:'hello'
-      }
-    });
-    console.log('Completed!', response);
-  } catch(err) {
-    console.error(`Error: ${err}`);
-  }
-});
+         
           function endoftimer(){
             document.getElementsByClassName("subcontent")[0].innerHTML="Sad";
           }
@@ -60,6 +49,7 @@
             },1000);
               
           }
+        
           </script>
     </body>
 </html>

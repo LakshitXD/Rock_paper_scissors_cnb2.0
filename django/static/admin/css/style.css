@@ -29,36 +29,7 @@ img.plwithtrump{
     height:auto;
     display:inline-block;
 }
-a.Rock{
-  background: url("https://imgur.com/nW5VI7e.png");
-  background-repeat: no-repeat;
-  background-size:auto;
-  width:50%;
-  height:300px;
-  margin: 0px auto 0px auto;
-  text-align:center;
-  display:inline-block;
-}
-a.Paper{
-  background: url("https://ktla.com/wp-content/uploads/sites/4/2020/04/GettyImages-1213254321.jpg");
-  background-repeat: no-repeat;
-  background-size:auto;
-  width:50%;
-  height:300px;
-  margin: 0px auto 0px auto;
-  text-align:center;
-  display:inline-block;
-}
-a.Scissors{
-  background: url("https://media.tenor.com/images/7f977baee89a794551241236033fe707/tenor.gif");
-  background-repeat: no-repeat;
-  background-size:auto;
-  width:50%;
-  height:300px;
-  margin: 0px auto 0px auto;
-  text-align:center;
-  display:inline-block;
-}
+
   button {
     background:#0cb3b9;
     border: 5px solid white;
@@ -78,6 +49,10 @@ a.Scissors{
     cursor: pointer;
     
    
+  }
+  #yeye{
+    height:50%;
+    width:auto;
   }
   div.subcontent{
     width:50%;
