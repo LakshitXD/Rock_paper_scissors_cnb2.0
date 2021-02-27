@@ -1,4 +1,4 @@
-# Rock_paper_scissors_cnb2.0
+# Rock_paper_scissors_cnb2.0 version-0.1
 # Made with :heart: by Team EzPz
 This is a project of Code'N'Build 2021. In which we have created a interesting way to play the old school "Rock, Paper and Scissors" game in a modern way with a twist!.
 
