@@ -11,6 +11,3 @@ We have created an interractive web application that contains an animated charac
 
 # The demonstration of the whole Project is Here:-
 https://youtu.be/Ox0ThYIVL1M
-
-
-
